@@ -9,7 +9,6 @@ const authError = document.getElementById('auth-error');
 const currentUserEl = document.getElementById('current-user');
 const scoreEl = document.getElementById('score');
 
-// АВТОРИЗАЦИЯ
 async function auth(endpoint) {
   const user = document.getElementById('username').value;
   const pass = document.getElementById('password').value;
