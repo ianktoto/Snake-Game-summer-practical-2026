@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Змейка - Лидерборд</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Экран авторизации -->
+    <div id="auth-screen" class="screen">
+      <h1>Игра «Змейка»</h1>
+      <input type="text" id="username" placeholder="Логин (мин. 3 символа)" />
+      <input type="password" id="password" placeholder="Пароль (мин. 6 символов)" />
+      <div class="buttons">
+        <button id="btn-login">Войти</button>
+        <button id="btn-signup">Регистрация</button>
+      </div>
+      <p id="auth-error" class="error"></p>
+    </div>
+
+    <!-- Игровой экран -->
+    <div id="game-screen" class="screen hidden">
+      <div class="header">
+        <span>Игрок: <b id="current-user"></b></span>
+        <span>Счёт: <b id="score">0</b></span>
+        <button id="btn-logout">Выйти</button>
+      </div>
+      <canvas id="game-canvas" width="400" height="400"></canvas>
+      <div id="game-over" class="hidden">
+        <h2>Игра окончена!</h2>
+        <p>Ваш счёт: <b id="final-score">0</b></p>
+        <button id="btn-restart">К таблице лидеров</button>
+      </div>
+    </div>
+
+    <!-- Экран лидерборда -->
+    <div id="leaderboard-screen" class="screen hidden">
+      <h2>Топ-10 игроков</h2>
+      <table id="leaderboard-table">
+        <thead>
+          <tr><th>Место</th><th>Игрок</th><th>Рекорд</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="btn-back">Вернуться в игру</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
